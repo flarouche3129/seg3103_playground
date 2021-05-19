@@ -1,9 +1,9 @@
 # SEG3103 Laboratory 2
-## Student 1 : Félix Larouche (30014453)
-## Student 2 : Emma Dobson Takoff (300108505)
+### Student 1 : Félix Larouche (30014453)
+### Student 2 : Emma Dobson Takoff (300108505)
 
-## Professor : Andrew Forward
-## Teacher assistant :  Zahra Kakavand
+### Professor : Andrew Forward
+### Teacher assistant :  Zahra Kakavand
 
 
 
