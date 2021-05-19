@@ -6,10 +6,17 @@
 ### Teacher assistant :  Zahra Kakavand
 
 
-
+This is the second laboratory for the course SEG3103.
 
 
 # Exercise 1
+
+### Run the sample test cases created from the tutorial, and report the results in the table below.
+### For each test case, specify the Expected Results (from the test case), the Actual Results (from the execution) and a Verdict (Pass if Actual Result and Expected Results match, Fail if Actual Result and Expected Results do not match and Inconclusive for cases where a determination can not be made).
+
+First, we need to run the app. To do so, all we need to do is run the command
+
+> java -jar  user-registration-app-0.1.0.jar
 
 Here are the results for the test cases created from the tutorial :
 
