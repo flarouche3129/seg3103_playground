@@ -25,6 +25,7 @@ http://localhost:8080/
 
 The app should appear on your screen and look like this
 
+![RegistrationAppScreenshot](https://user-images.githubusercontent.com/56052670/119044229-ecd46c80-b987-11eb-854c-5b9e910b3e9a.PNG)
 
 
 Here are the results for the test cases created from the tutorial :
