@@ -3,7 +3,7 @@
 ### Student 2 : Emma Dobson Takoff (300108505)
 
 ### Professor : Andrew Forward
-### Teacher assistant :  Zahra Kakavand
+### Teacher assistant :  Henry Chen
 
 
 This is the second laboratory for the course SEG3103.
