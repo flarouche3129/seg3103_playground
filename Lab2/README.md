@@ -19,6 +19,14 @@ First, we need to run the app. To do so, all we need to do is run the command
 
 `java -jar  user-registration-app-0.1.0.jar`
 
+Then, open the browser of your choice and go to
+
+http://localhost:8080/
+
+The app should appear on your screen and look like this
+
+
+
 Here are the results for the test cases created from the tutorial :
 
 | Test case | Expected Results              | Actual Results                                                                                                   | Verdict (Pass, Fail, Inconclusive) |
