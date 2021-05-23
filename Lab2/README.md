@@ -44,9 +44,8 @@ Here are the results for the test cases created from the tutorial:
 ## Exercise 2
 
 **Implement explicit tests using JUnit 5 in DateTest.java.**
-**Implement Parameterized tests using JUnit 4 or 5. You will need to create two Parameterized test suites:**
-**1. DateNextDateOkTest.java for test cases that run OK and return a date**
-**2. DateNextDateExceptionTest.java for test cases that DO result in an exception**
+
+**Implement Parameterized tests using JUnit 4 or 5. You will need to create two Parameterized test suites: DateNextDateOkTest.java for test cases that run OK and return a date and DateNextDateExceptionTest.java for test cases that DO result in an exception.**
 
 The explicit and parameterized tests were implemented in the files outlined above.
 
