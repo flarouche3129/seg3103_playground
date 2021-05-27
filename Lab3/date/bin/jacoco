@@ -17,8 +17,8 @@ java -javaagent:lib/jacocoagent.jar -jar lib/junit-platform-console-standalone-1
 # Generate a report
 java -jar lib/jacococli.jar report jacoco.exec --classfiles dist --sourcefiles src --html report
 
-# Open the report
-open ./report/index.html
+# Open the report (replace open by start if using windows)
+open ./report/index.html 
 
-#To compile on Windows, first paste the content of the src in the test folder, then run this
-javac -encoding UTF-8 --source-path test -d dist -cp lib/junit-platform-console-standalone-1.7.1.jar test/*.java
+#To compile on Windows, use this
+javac -encoding UTF-8 --source-path src -d dist -cp lib/junit-platform-console-standalone-1.7.1.jar test/*.java
