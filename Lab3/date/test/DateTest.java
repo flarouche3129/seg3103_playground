@@ -149,4 +149,13 @@ class DateTest {
     );
   }
 
+  @Test
+  void nextDate_valid_month9() {
+    Date today = new Date(1901, 9, 1);
+    Date expectedTomorrow = new Date(1901, 9, 2);
+    assertEquals(expectedTomorrow, today.nextDate());
+  }
+
+  
+
 }
