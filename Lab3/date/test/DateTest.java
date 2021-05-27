@@ -179,4 +179,32 @@ class DateTest {
       assertEquals(expectedTomorrow, today.nextDate());
   }
 
+  @Test
+  void nextDate_invalid_equals(){
+      Object obj = new Object();
+      Date date = new Date(2021,5,27);
+      assertFalse(date.equals(obj));
+  }
+
+  @Test
+  void nextDate_invalid_equals2(){
+      Date date = new Date(2021,5,27);
+      Date date2 = new Date(2020,4,26);
+      assertFalse(date.equals(date2));
+  }
+
+  @Test
+  void nextDate_invalid_equals3(){
+      Date date = new Date(2021,5,27);
+      Date date2 = new Date(2021,4,26);
+      assertFalse(date.equals(date2));
+  }
+
+  @Test
+  void nextDate_invalid_equals4(){
+      Date date = new Date(2021,5,27);
+      Date date2 = new Date(2021,5,26);
+      assertFalse(date.equals(date2));
+  }
+
 }
