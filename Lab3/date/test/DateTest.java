@@ -213,4 +213,28 @@ class DateTest {
       assertEquals("2021/May/27",date.toString());
   }
 
+  @Test
+  void nextDate_invalid_setDay() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(1975, 6, 32)
+    );
+  }
+
+  @Test
+  void nextDate_invalid_setDay2() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(2010, 4, 31)
+    );
+  }
+
+  @Test
+  void nextDate_invalid_setDay3() {
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new Date(2020, 2, 30)
+    );
+  }
+
 }
