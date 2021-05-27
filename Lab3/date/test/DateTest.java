@@ -164,5 +164,19 @@ class DateTest {
       Date expectedTomorrow = new Date(2000, 1, 2);
       assertEquals(expectedTomorrow, today.nextDate());
   }
+  
+  @Test
+  void nextDate_valid_endOfMonth(){
+      Date today = new Date(2021, 2, 28);
+      Date expectedTomorrow = new Date(2021, 3, 1);
+      assertEquals(expectedTomorrow, today.nextDate());
+  }
+
+  @Test
+  void nextDate_valid_endOfMonth2(){
+      Date today = new Date(2020, 2, 28);
+      Date expectedTomorrow = new Date(2020, 2, 29);
+      assertEquals(expectedTomorrow, today.nextDate());
+  }
 
 }
