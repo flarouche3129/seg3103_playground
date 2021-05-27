@@ -149,13 +149,20 @@ class DateTest {
     );
   }
 
+  // ADDITIONAL TESTS TO ACHIEVE BETTER COVERAGE
+
   @Test
   void nextDate_valid_month9() {
-    Date today = new Date(1901, 9, 1);
-    Date expectedTomorrow = new Date(1901, 9, 2);
-    assertEquals(expectedTomorrow, today.nextDate());
+      Date today = new Date(1901, 9, 1);
+      Date expectedTomorrow = new Date(1901, 9, 2);
+      assertEquals(expectedTomorrow, today.nextDate());
   }
 
-  
+  @Test 
+  void nextDate_valid_leapYear(){
+      Date today = new Date(2000, 1, 1);
+      Date expectedTomorrow = new Date(2000, 1, 2);
+      assertEquals(expectedTomorrow, today.nextDate());
+  }
 
 }
