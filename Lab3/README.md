@@ -21,12 +21,11 @@ First, we ran Jacoco against the existing Date tests and observed the coverage.
 ![Date.java Initial Code Coverage](assets/initial-coverage.png)
 
 To do this we used the following series of commands.
-Compiled the application: `javac -encoding UTF-8 --source-path src -d dist src/*.java`
-Compiled the tests: `javac -encoding UTF-8 --source-path test -d dist -cp dist:lib/junit-platform-console-standalone-1.7.1.jar test/*.java
-`
-Ran the agent: `java -javaagent:lib/jacocoagent.jar -jar lib/junit-platform-console-standalone-1.7.1.jar --class-path dist --scan-class-path`
-Generated report: `java -jar lib/jacococli.jar report jacoco.exec --classfiles dist --sourcefiles src --html report`
-Opened the report: `open ./report/index.html `
+Compiled the application: `javac -encoding UTF-8 --source-path src -d dist src/*.java` 
+Compiled the tests: `javac -encoding UTF-8 --source-path test -d dist -cp dist:lib/junit-platform-console-standalone-1.7.1.jar test/*.java` 
+Ran the agent: `java -javaagent:lib/jacocoagent.jar -jar lib/junit-platform-console-standalone-1.7.1.jar --class-path dist --scan-class-path` 
+Generated report: `java -jar lib/jacococli.jar report jacoco.exec --classfiles dist --sourcefiles src --html report` 
+Opened the report: `open ./report/index.html ` 
 
 Then we added additional tests in the DateTest.java file to achieve better coverage. The following image shows the results we obtained.
 
