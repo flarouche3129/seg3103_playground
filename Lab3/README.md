@@ -153,29 +153,28 @@ To refactor Date.java, we decided to make small changes to the methods **setDay(
 
 Here is the setDay() method before we made any changes : 
 
-[setDay Method Before Changes](assets/setDateBefore.png)
+![setDateBefore](https://user-images.githubusercontent.com/56052670/120373957-f0041c80-c2e6-11eb-88d6-83fce6131a4d.png)
 
 and here is the setDay() method after we refactored it : 
 
-[setDay Method After Changes](assets/newSetDate.PNG)
-
+![newSetDate](https://user-images.githubusercontent.com/56052670/120374030-0611dd00-c2e7-11eb-8880-2b284f3f34f1.PNG)
 
 
 As for the isThirtyDayMonth method, here is the method before we made any changes : 
 
-[isThirtyDayMonth Method Before Changes](assets/isThirtyDayMonthBefore.PNG)
+![isThirtyDayMonthBefore](https://user-images.githubusercontent.com/56052670/120374110-1f1a8e00-c2e7-11eb-87a0-26cbe2c59c4a.PNG)
 
 and here is the isThirtyDayMonth method after we refactored it :
 
-[isThirtyDayMonth Method After Changes](assets/isThirtyDayMonthAfter.PNG)
+![isThirtyDayMonthAfter](https://user-images.githubusercontent.com/56052670/120374117-22ae1500-c2e7-11eb-8ba8-2faad7199644.PNG)
 
 One thing to note is that we are not using the new tests that we wrote for the first exercice when running the coverage. This way, we can better see if the refactoring we did actually improved the coverage or not.
 
 Here is the report that was generated after the refactorisation of both methods : 
 
-[Report After Refactoring](assets/reportAfterRefactor.PNG)
+![reportAfterRefactor](https://user-images.githubusercontent.com/56052670/120374149-30fc3100-c2e7-11eb-965a-043955daa756.PNG)
 
-Compared to the initial code coverage generated (which you can find at the beginning of this README file), we can see that the coverage for both refactored method improved. setDay() went from 64% instruction coverage to 80% and isThirtyDayMonth went from 87% branch coverage to 100% branch coverage. 
+Compared to the [initial code coverage generated](assets/initial-coverage.png), we can see that the coverage for both refactored method improved. setDay() went from 64% instruction coverage to 80% and isThirtyDayMonth went from 87% branch coverage to 100% branch coverage. 
 
 The instruction coverage for setDay improved due to having less if statement to test. Initially, this method had 5 if statements and after our refactorisation, it only has 3. This is what makes the instruction coverage change for the better.
 
