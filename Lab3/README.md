@@ -6,7 +6,7 @@
 | Semester | Summer 2021 |
 | Professor | Andrew Forward |
 | TA | Nazanin Bayati |
-| Student 1 | Félix Larouche (30014453) |
+| Student 1 | Félix Larouche (300144353) |
 | Student 2 | Emma Dobson Takoff (300108505) |
 
 This is the third laboratory for the course SEG3103.

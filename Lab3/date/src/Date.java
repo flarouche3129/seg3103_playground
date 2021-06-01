@@ -65,7 +65,7 @@ public class Date {
 	 * Check validity of the month when creating a new Date. month must be between 1 and 12.
 	 */
 	private void setMonth(int month) {
-		if (month < 1 || month > 12) {
+		if (month < 1 ^ month > 12) {
 			throw new IllegalArgumentException("month must be between 1 and 12.");
 		}
 		this.month = month;
@@ -120,6 +120,7 @@ public class Date {
 			return true;
 		else return false;
 	}
+	
 
 	/**
 	 * returns true if year is leap.
