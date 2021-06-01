@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Date {
 
 	/* Data fields */
@@ -60,7 +63,7 @@ public class Date {
 	 * Check validity of the month when creating a new Date. month must be between 1 and 12.
 	 */
 	private void setMonth(int month) {
-		if (month < 1 ^ month > 12) {
+		if (month < 1 || month > 12) {
 			throw new IllegalArgumentException("month must be between 1 and 12.");
 		}
 		this.month = month;
@@ -111,9 +114,11 @@ public class Date {
 	 * returns true if month has 30 days.
 	 */
 	private boolean isThirtyDayMonth() {
-		if (this.month == 4 || this.month == 6 || this.month == 9 || this.month == 11)
+		ArrayList<Integer> myList = new ArrayList<>(Arrays.asList(4,6,9,11));
+		if (myList.contains(this.month)){
 			return true;
-		else return false;
+		}
+		return false;
 	}
 	
 
