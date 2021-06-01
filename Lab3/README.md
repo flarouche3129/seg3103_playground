@@ -135,3 +135,39 @@ Another reason we cannot achieve 100% coverage for Date.java is that in the setM
 
 
 **Refactor Date.java. Run coverage after refactoring.**
+
+To refactor Date.java, we decided to make small changes to the methods **setDay()** and **isThirtyDayMonth**. 
+
+Here is the setDay() method before we made any changes : 
+
+[setDay Method Before Changes](assets/setDateBefore.png)
+
+and here is the setDay() method after we refactored it : 
+
+[setDay Method After Changes](assets/newSetDate.PNG)
+
+
+
+As for the isThirtyDayMonth method, here is the method before we made any changes : 
+
+[isThirtyDayMonth Method Before Changes](assets/isThirtyDayMonthBefore.PNG)
+
+and here is the isThirtyDayMonth method after we refactored it :
+
+[isThirtyDayMonth Method After Changes](assets/isThirtyDayMonthAfter.PNG)
+
+One thing to note is that we are not using the new tests that we wrote for the first exercice when running the coverage. This way, we can better see if the refactoring we did actually improved the coverage or not.
+
+Here is the report that was generated after the refactorisation of both methods : 
+
+[Report After Refactoring](assets/reportAfterRefactor.PNG)
+
+Compared to the initial code coverage generated (which you can find at the beginning of this README file), we can see that the coverage for both refactored method improved. setDay() went from 64% instruction coverage to 80% and isThirtyDayMonth went from 87% branch coverage to 100% branch coverage. 
+
+The instruction coverage for setDay improved due to having less if statement to test. Initially, this method had 5 if statements and after our refactorisation, it only has 3. This is what makes the instruction coverage change for the better.
+
+As for isThirtyDayMonth, the branch coverage improved due to having less possibilites inside the if statement. Before we made changes, the method had 4 OR statements. Now, it only has to check if the month is part of a list of month that have 30 days. This makes the code a bit cleaner and reduces the number of branches to check while testing.
+
+
+
+
