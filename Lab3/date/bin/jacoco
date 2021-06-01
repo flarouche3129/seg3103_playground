@@ -20,7 +20,6 @@ java -jar lib/jacococli.jar report jacoco.exec --classfiles dist --sourcefiles s
 # Open the report (replace open by start if using windows)
 open ./report/index.html 
 
-
 #Open the report on Windows
 start ./report/index.html 
 
