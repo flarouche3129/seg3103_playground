@@ -12,4 +12,9 @@ public class FizzBuzzTest {
 		assertEquals("1", fizzBuzz(1));
 	}
 
+	@Test
+	public void test_fizzBuzz2(){
+		assertEquals("2", fizzBuzz(2));
+	}
+
 }
