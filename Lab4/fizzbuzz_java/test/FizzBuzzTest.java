@@ -1,8 +1,14 @@
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 
 public class FizzBuzzTest {
 
+
+	//First version of FizzBuzz that only takes an integer and returns a single String.
 	private String fizzBuzz(int num){
 		if (num%3==0 && num%5==0){
 			return "FizzBuzz";
@@ -37,6 +43,22 @@ public class FizzBuzzTest {
 	@Test
 	public void test_fizzBuzz15(){
 		assertEquals("FizzBuzz", fizzBuzz(15));
+	}
+
+
+	//Second version of FizzBuzz, which returns an array of Strings instead of a single string
+	private String[] fizzBuzzArray(int num){
+		String[] array = new String[1];
+		return array;
+	}
+
+
+	@Test
+	public void test_fizzbuzz_array_1(){
+		List<String> myArray = new ArrayList<>();
+		myArray.add("1");
+
+		assertEquals(myArray, fizzBuzzArray(1));
 	}
 
     
