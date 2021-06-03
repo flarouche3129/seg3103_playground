@@ -32,4 +32,9 @@ public class FizzBuzzTest {
 		assertEquals("Buzz", fizzBuzz(5));
 	}
 
+	@Test
+	public void test_fizzBuzz15(){
+		assertEquals("FizzBuzz", fizzBuzz(15));
+	}
+
 }
