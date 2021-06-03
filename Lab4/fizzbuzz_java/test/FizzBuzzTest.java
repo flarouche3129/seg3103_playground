@@ -49,16 +49,17 @@ public class FizzBuzzTest {
 	//Second version of FizzBuzz, which returns an array of Strings instead of a single string
 	private String[] fizzBuzzArray(int num){
 		String[] array = new String[1];
+		array[0] = "1";
 		return array;
 	}
 
 
 	@Test
 	public void test_fizzbuzz_array_1(){
-		List<String> myArray = new ArrayList<>();
-		myArray.add("1");
+		String[] myArray = new String[1];
+		myArray[0] = "1";
 
-		assertEquals(myArray, fizzBuzzArray(1));
+		assertArrayEquals(myArray, fizzBuzzArray(1));
 	}
 
     
