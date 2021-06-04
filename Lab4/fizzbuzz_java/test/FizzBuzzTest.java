@@ -56,6 +56,9 @@ public class FizzBuzzTest {
 			if(i % 3 == 0){
 				array[i-1] = "Fizz";
 			}
+			else if(i % 5 == 0){
+				array[i-1] = "Buzz";
+			}
 			else{
 				array[i-1] = String.valueOf(i);
 			}
