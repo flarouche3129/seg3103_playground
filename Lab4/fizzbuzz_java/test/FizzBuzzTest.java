@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
+import jdk.jfr.Timestamp;
+
 public class FizzBuzzTest {
 
 
@@ -48,8 +50,7 @@ public class FizzBuzzTest {
 
 	//Second version of FizzBuzz, which returns an array of Strings instead of a single string
 	private String[] fizzBuzzArray(int num){
-		String[] array = new String[1];
-		array[0] = "1";
+		String[] array = new String[]{"1"};
 		return array;
 	}
 
@@ -61,6 +62,8 @@ public class FizzBuzzTest {
 
 		assertArrayEquals(myArray, fizzBuzzArray(1));
 	}
+
+	
 
     
 }
