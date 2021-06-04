@@ -5,8 +5,6 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import jdk.jfr.Timestamp;
-
 public class FizzBuzzTest {
 
 
@@ -73,7 +71,12 @@ public class FizzBuzzTest {
 		String[] myArray = new String[]{"1", "2"};
 		assertArrayEquals(myArray, fizzBuzzArray(2));
 	}
-	
+
+	@Test
+	public void test_fizzbuzz_array_3(){
+		String[] myArray = new String[]{"1", "2", "Fizz"};
+		assertArrayEquals(myArray, fizzBuzzArray(3));
+	}
 
     
 }
