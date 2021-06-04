@@ -26,7 +26,7 @@ First we implemented the fizzBuzz(int num) method with a series of 5 commit grou
 
 Next, we implemented the fizzBuzzArray(int num) method with a series of 5 commit groups. This second implementation returns an array of strings from 1 to num (with the numbers replaced by "Fizz", "Buzz", and "FizzBuzz" accordingly). Like before, each commit group starts with a failed test, followed by a passed test. The commits can be seen in the screenshot below. Note again that, due to the simplicity of the method, we didn't always have a need to refactor after the failed/passed tests.
 
-![Second 5 commit groups](assets/commit-group-2.png)
+![Second 5 commit groups](assets/commit-group-two.png)
 
 
 
