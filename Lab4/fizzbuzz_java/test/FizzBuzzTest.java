@@ -52,7 +52,13 @@ public class FizzBuzzTest {
 		String[] array = new String[num];
 
 		for (int i = 1; i <= num; i++) {
-			array[i-1] = String.valueOf(i);
+
+			if(i % 3 == 0){
+				array[i-1] = "Fizz";
+			}
+			else{
+				array[i-1] = String.valueOf(i);
+			}
 		}
 		return array;
 	}
