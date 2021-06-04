@@ -93,5 +93,11 @@ public class FizzBuzzTest {
 		assertArrayEquals(myArray, fizzBuzzArray(5));
 	}
 
+	@Test
+	public void test_fizzbuzz_array_15(){
+		String[] myArray = new String[]{"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"};
+		assertArrayEquals(myArray, fizzBuzzArray(15));
+	}
+
     
 }
