@@ -50,7 +50,9 @@ public class FizzBuzzTest {
 
 	//Second version of FizzBuzz, which returns an array of Strings instead of a single string
 	private String[] fizzBuzzArray(int num){
-		String[] array = new String[]{"1"};
+
+		
+		String[] array = new String[]{"1", "2"};
 		return array;
 	}
 
