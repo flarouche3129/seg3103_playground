@@ -53,7 +53,11 @@ public class FizzBuzzTest {
 
 		for (int i = 1; i <= num; i++) {
 
-			if(i % 3 == 0){
+			if((i % 3 == 0) && (i % 5 == 0)){
+				array[i-1] = "FizzBuzz";
+			}
+
+			else if(i % 3 == 0){
 				array[i-1] = "Fizz";
 			}
 			else if(i % 5 == 0){
