@@ -51,8 +51,11 @@ public class FizzBuzzTest {
 	//Second version of FizzBuzz, which returns an array of Strings instead of a single string
 	private String[] fizzBuzzArray(int num){
 
-		
-		String[] array = new String[]{"1", "2"};
+		String[] array = new String[num];
+
+		for (int i = 1; i <= num; i++) {
+			array[i-1] = String.valueOf(i);
+		}
 		return array;
 	}
 
