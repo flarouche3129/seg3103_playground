@@ -17,10 +17,8 @@ defmodule Grades.Calculator do
     # Refactored for Question 2.4
     avg_exams = avg_exams(midterm, final)
 
-    num_labs =
-      labs
-      |> Enum.reject(fn mark -> mark < 0.25 end)
-      |> Enum.count()
+    # Refactored for Question 2.4
+    num_labs = count_labs(labs)
 
     # Refactored for Question 2.2
     if failed_to_participate(avg_homework, avg_exams, num_labs) do
@@ -53,10 +51,8 @@ defmodule Grades.Calculator do
     # Refactored for Question 2.4
     avg_exams = avg_exams(midterm, final)
 
-    num_labs =
-      labs
-      |> Enum.reject(fn mark -> mark < 0.25 end)
-      |> Enum.count()
+    # Refactored for Question 2.4
+    num_labs = count_labs(labs)
 
     # Refactored for Question 2.2
     if failed_to_participate(avg_homework, avg_exams, num_labs) do
@@ -111,6 +107,13 @@ defmodule Grades.Calculator do
   # Helper method for Question 2.4
   def avg_exams(midterm, final) do 
     (midterm + final) / 2
+  end
+
+  # Helper method for Question 2.4
+  def count_labs(labs) do 
+    labs
+      |> Enum.reject(fn mark -> mark < 0.25 end)
+      |> Enum.count()
   end
 
 end
