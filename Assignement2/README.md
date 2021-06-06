@@ -25,7 +25,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 | Course | SEG 3103 |
 | Semester | Summer 2021 |
 | Professor | Andrew Forward |
-| TA | Nazanin Bayati |
+| TA | Zahra Kakavand, Nazanin Bayati Chaleshtari, and Henry Chen |
 | Student 1 | Félix Larouche (300144353) |
 | Student 2 | Emma Dobson Takoff (300108505) |
 
