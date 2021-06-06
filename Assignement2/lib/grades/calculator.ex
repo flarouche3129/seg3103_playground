@@ -14,7 +14,8 @@ defmodule Grades.Calculator do
     # Refactored for Question 2.1
     {avg_homework, avg_labs} = avg(homework, labs)
 
-    avg_exams = (midterm + final) / 2
+    # Refactored for Question 2.4
+    avg_exams = avg_exams(midterm, final)
 
     num_labs =
       labs
@@ -49,7 +50,8 @@ defmodule Grades.Calculator do
     # Refactored for Question 2.1
     {avg_homework, avg_labs} = avg(homework, labs)
 
-    avg_exams = (midterm + final) / 2
+    # Refactored for Question 2.4
+    avg_exams = avg_exams(midterm, final)
 
     num_labs =
       labs
@@ -104,6 +106,11 @@ defmodule Grades.Calculator do
   # Helper method for Question 2.3
   def calculate_grade(avg_labs, avg_homework, midterm, final) do 
     0.2 * avg_labs + 0.3 * avg_homework + 0.2 * midterm + 0.3 * final
+  end
+
+  # Helper method for Question 2.4
+  def avg_exams(midterm, final) do 
+    (midterm + final) / 2
   end
 
 end
