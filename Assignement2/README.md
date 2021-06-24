@@ -17,3 +17,17 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+# Assignement 2
+
+| Information | Value |
+| --- | --- |
+| Course | SEG 3103 |
+| Semester | Summer 2021 |
+| Professor | Andrew Forward |
+| TA | Zahra Kakavand, Nazanin Bayati Chaleshtari, and Henry Chen |
+| Student 1 | Félix Larouche (300144353) |
+| Student 2 | Emma Dobson Takoff (300108505) |
+
+The document with all the information regarding Assignement 2 has been submitted on Brightspace. 
+
