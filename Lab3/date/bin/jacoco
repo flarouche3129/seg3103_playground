@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Remove any class files from dist and all jacoco coverage files
-rm -f ./dist/*.class
+rm ./dist/*.class
 rm jacoco.exec
-rm -fr ./report
+rm ./report
 
-# Compile the application
+# Compile the applicationls
 javac -encoding UTF-8 --source-path src -d dist src/*.java
 
 # Compile the tests
@@ -25,3 +25,7 @@ start ./report/index.html
 
 #To compile on Windows, use this
 javac -encoding UTF-8 --source-path src -d dist -cp lib/junit-platform-console-standalone-1.7.1.jar test/*.java
+
+
+javac -encoding UTF-8 --source-path src -d dist -cp lib/junit-platform-console-standalone-1.7.1.jar test/*.java
+
