@@ -11,9 +11,9 @@
 
 This is the fifth laboratory for the course SEG3103.
 
-## Stubs
+## Part 1: Stubs
 
-After compiling and running the application successfully, we stubbed the three methods in Grades.Calculator (namely, percentage_grade, letter_grade, and numeric_grade). The following screenshot shows are stubbed code.
+After compiling and running the application successfully, we stubbed the three methods in Grades.Calculator (namely, percentage_grade, letter_grade, and numeric_grade). The following screenshot shows our stubbed code.
 
 ![Stubbed code](assets/grades_stub.PNG)
 
@@ -25,8 +25,10 @@ After replacing our stubbed module to make the application work for real, we obs
 
 ![Error](assets/grades_error_message.PNG)
 
+The error is due to the fact that when we input grades into the web application, the numbers are strings, rather than integers, so this causes an arithmetic errror when passed into the methods of Grades.Calculator, which take integers in order to calculate the final grade.
 
-## Mocks
+
+## Part 2: Mocks
 
 We have implemented the 4 missing test cases in the TwitterTest.java file. The following screenshot shows the results of running the tests.
 
