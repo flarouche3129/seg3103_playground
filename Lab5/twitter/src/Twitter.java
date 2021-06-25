@@ -28,8 +28,7 @@ public class Twitter {
     }else{
       tweet = tweet.substring(index,index2);
     }
-    return tweet.equals("@" + name);
-    
+    return tweet.equals("@" + name); 
   }
 
 }
