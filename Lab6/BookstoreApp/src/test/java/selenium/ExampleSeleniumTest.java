@@ -20,6 +20,7 @@ class ExampleSeleniumTest {
 
   static Process server;
   private WebDriver driver;
+  private WebDriver driverAdmin;
 
   @BeforeAll
   public static void setUpBeforeClass() throws Exception {
@@ -74,6 +75,25 @@ class ExampleSeleniumTest {
     expected = "Bienvenu";
     actual = welcome.getText();
     assertEquals(expected, getWords(actual)[0]);
+  }
+
+  @Test
+  public void test3() {
+    driver.get("http://localhost:8080/admin");
+
+    WebElement username = driver.findElement(By.id("loginId"));
+    username.sendKeys("admin");
+
+    WebElement password = driver.findElement(By.id("loginPasswd"));
+    password.sendKeys("password");
+
+    WebElement signIn = driver.findElement(By.id("loginBtn"));
+    signIn.click();
+
+    String actualUrl="http://localhost:8080/admin";
+    String expectedUrl= driver.getCurrentUrl();
+    assertEquals(expectedUrl, actualUrl);
+
   }
 
   private String[] getWords(String s) {
