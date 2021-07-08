@@ -18,14 +18,14 @@ After extracting BookstoreApp.zip, we ran `mvn compile` and then `java -jar ./ta
 Here is a screenshot of the application running:
 ![App running](assets/AppRunning.png)
 
-To run the tests, we ran mvn test.
+To run the tests, we ran `mvn test`.
 
 Here is a screenshot of the three tests passing:
 ![Tests passing](assets/tests-pass.png)
 
 Next, we added an additional Selenium web driver test to test the login process.
 
-Here is the code for this:
+Here is the code for the added test where we check that the username "admin" and the password "password" will successfully bring the user to the admin page of the application when they click "Sign in":
 ```java
   @Test
   public void test3() {
