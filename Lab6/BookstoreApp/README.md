@@ -13,10 +13,28 @@ This is the sixth laboratory for the course SEG3103.
 
 ## Automated User Acceptance Testing with Selenium WebDriver
 
-After extracting BookstoreApp.zip, we ran `mvn compile` and then `java -jar ./target/BookstoreApp-0.1.0.jar`. 
+Before beginning the lab we installed Maven. Here is a screenshot after running `mvn --version` to show that it installed correctly:
+![Maven version](assets/version.png)
+
+After extracting BookstoreApp.zip, we ran `mvn compile`.
+
+Here is a screenshot of the terminal after compiling:
+![Compiled](assets/compile.png)
+
+Then we ran `mvn package -DskipTests` which will compile all of the tests without actually running them.
+![Skip tests](assets/skip-tests.png)
+...
+![Skip tests 2](assets/skip-tests2.png)
+
+
+Then we ran `java -jar ./target/BookstoreApp-0.1.0.jar`. 
 
 Here is a screenshot of the application running:
 ![App running](assets/AppRunning.png)
+
+Here is a screenshot of the terminal:
+![Run](assets/run-app.png)
+
 
 To run the tests, we ran `mvn test`.
 
