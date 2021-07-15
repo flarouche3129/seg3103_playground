@@ -26,7 +26,7 @@ Here is a screenshot of the initial SpotBugs analysis:
 Here is a screenshot of the code before changes:
 ![Bug 1](assets/Bug1_SpotBug.png)
 
-Here is a screenshot of the fixed bug:
+Here is a screenshot of the fixed bug:\
 ![Bug 1 Fixed](assets/Bug1_Fixed.png)
 
 To do the comparison we replaced the == with the .equals() method.
@@ -76,7 +76,7 @@ To fix the bugs, we simply had to make the field static, as seen in the screensh
 Here is a screenshot of the bug before changing the code:
 ![Bug 13](assets/Bug13_SpotBug.png)
 
-To fix the bug, we simply need to remove the else if to remove the redundancy:
+To fix the bug, we simply need to remove the else if to remove the redundancy:\
 ![Bug 13 Fixed](assets/Bug13_Fixed.png)
 
 ### Bug 14: Switch statement found where default case is missing
@@ -89,10 +89,10 @@ To fix this bug, we would add a default case which would execute if none of the 
 ### Bug 15-18: Condition has no effect
 
 Here is a screenshot of the bugs 15-17:
-![Bugs 15-17](assets/Bug15-17_SpotBug.png)
+![Bugs 15-17](assets/Bug15-17_SpotBug.PNG)
 
 To fix this we replaced the if, else statements with one line since the same line of code was supposed to be executed regardless of the value of i, meaning that the if, else blocks were unnecessary. Here is a screenshot of the change we made:
-![Bugs 15-17 Fixed](assets/Bug15-17_Fixed.png)
+![Bugs 15-17 Fixed](assets/Bug15-17_Fixed.PNG)
 
 Here is a screenshot of bug 18:
 ![Bug 18](assets/Bug18_SpotBug.png)
@@ -102,6 +102,6 @@ To fix the bug, we can replace the else if statement with an else statement as s
 
 ### Summary
 In total we fixed 15 bugs. Here is a screenshot of the analysis after fixing the bugs:
-![SpotBugs Final Analysis](assets/SpotBug_FinalResult.png)
+![SpotBugs Final Analysis](assets/SpotBug_FinalResult.PNG)
 
 As expected, all bugs that we fixed no longer showed up in the analysis but since we did not fix 3 of them there are 3 remaining.
