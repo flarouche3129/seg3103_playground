@@ -18,7 +18,7 @@ First, we compiled the app with `javac -encoding UTF-8 --source-path src -d dist
 Here is a screenshot of the app running:
 ![App running](assets/AppRunning.png)
 
-Here is a screenshot of the initial SpotBugs analysis:
+Here is a screenshot of the initial SpotBugs analysis where there were 18 total bugs:
 ![SpotBugs Initial Analysis](assets/SpotBugRunning.png)
 
 ### Bug 1: Comparison of String parameter using == or !=
