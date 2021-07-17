@@ -1,0 +1,6 @@
+#!/bin/bash
+
+java -jar ./target/BookstoreApp-0.1.0.jar
+
+#For windows
+java -jar bookstore5.jar 
