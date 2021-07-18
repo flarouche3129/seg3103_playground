@@ -17,7 +17,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.util.Date;
 import java.util.List;
-import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.lang.Math;
 
@@ -55,49 +54,6 @@ class ExampleSeleniumTest {
   @AfterAll
   public static void tearDownAfterClass() throws Exception {
     server.destroy();
-  }
-
-  @Test
-  void test1() {
-    WebElement element = driver.findElement(By.id("title"));
-    String expected = "YAMAZONE BookStore";
-    String actual = element.getText();
-    assertEquals(expected, actual);
-  }
-
-  @Test
-  public void test2() {
-    WebElement welcome = driver.findElement(By.cssSelector("p"));
-    String expected = "Welcome";
-    String actual = welcome.getText();
-    assertEquals(expected, getWords(actual)[0]);
-    WebElement langSelector = driver.findElement(By.id("locales"));
-    langSelector.click();
-    WebElement frSelector = driver.findElement(By.cssSelector("option:nth-child(3)"));
-    frSelector.click();
-    welcome = driver.findElement(By.cssSelector("p"));
-    expected = "Bienvenu";
-    actual = welcome.getText();
-    assertEquals(expected, getWords(actual)[0]);
-  }
-
-  @Test
-  public void test3() {
-    driver.get("http://localhost:8080/admin");
-
-    WebElement username = driver.findElement(By.id("loginId"));
-    username.sendKeys("admin");
-
-    WebElement password = driver.findElement(By.id("loginPasswd"));
-    password.sendKeys("password");
-
-    WebElement signIn = driver.findElement(By.id("loginBtn"));
-    signIn.click();
-
-    String actualUrl = "http://localhost:8080/admin";
-    String expectedUrl = driver.getCurrentUrl();
-    assertEquals(expectedUrl, actualUrl);
-
   }
 
   // Positive test case for F1
@@ -289,7 +245,7 @@ class ExampleSeleniumTest {
 
   }
 
-  // Positive test case for F4/F4,1
+  // Positive test case for F4/F4.1
   @Test
   public void checkBookOrderPositive() {
 
@@ -598,7 +554,292 @@ class ExampleSeleniumTest {
     deleteBtn.click();
   }
 
-  
+  @Test
+  public void TC1_1(){
+    loginAsAdmin();
+    String actualUrl = "http://localhost:8080/admin";
+    String expectedUrl = driver.getCurrentUrl();
+    assertEquals(expectedUrl, actualUrl);
+  }
+
+  @Test
+  public void TC1_2(){
+    driver.get("http://localhost:8080/admin");
+
+    WebElement username = driver.findElement(By.id("loginId"));
+    username.sendKeys("test");
+
+    WebElement password = driver.findElement(By.id("loginPasswd"));
+    password.sendKeys("test");
+
+    WebElement signIn = driver.findElement(By.id("loginBtn"));
+    signIn.click();
+
+    String actualUrl = "http://localhost:8080/login?error";
+    String expectedUrl = driver.getCurrentUrl();
+    assertEquals(expectedUrl, actualUrl);
+
+    WebElement newUsername = driver.findElement(By.id("loginId"));
+    newUsername.sendKeys("admin");
+
+    WebElement newPassword = driver.findElement(By.id("loginPasswd"));
+    newPassword.sendKeys("password");
+
+    WebElement newSignIn = driver.findElement(By.id("loginBtn"));
+    newSignIn.click();
+
+    String newActualUrl = "http://localhost:8080/admin";
+    String newExpectedUrl = driver.getCurrentUrl();
+    assertEquals(newExpectedUrl, newActualUrl);
+
+  }
+
+  @Test
+  public void TC2_1(){
+    loginAsAdmin();
+    
+    WebElement signOutForm = driver.findElement(By.xpath("//div[@class='menu']/form[2]"));
+    signOutForm.submit();
+
+    String newActualUrl = "http://localhost:8080/login?logout";
+    String newExpectedUrl = driver.getCurrentUrl();
+    assertEquals(newExpectedUrl, newActualUrl);
+
+  }
+
+  @Test
+  public void TC3_1(){
+    loginAsAdmin();
+
+    WebElement category = driver.findElement(By.id("addBook-category"));
+    category.sendKeys("test");
+
+    WebElement bookId = driver.findElement(By.id("addBook-id"));
+    bookId.sendKeys("test123");
+
+    WebElement title = driver.findElement(By.id("addBook-title"));
+    title.sendKeys("test");
+
+    WebElement author = driver.findElement(By.id("addBook-authors"));
+    author.sendKeys("test");
+
+    WebElement cost = driver.findElement(By.id("cost"));
+    cost.sendKeys("10.0");
+
+    WebElement addBtn = driver.findElement(By.name("addBook"));
+    addBtn.click();
+
+    WebElement feedback = driver.findElement(By.id("feedback"));
+
+    String actualMessage = feedback.getText();
+    String expectedMessage = "Successfully added book";
+
+    assertEquals(expectedMessage, actualMessage);
+
+    WebElement search = driver.findElement(By.id("search"));
+    search.sendKeys("test");
+
+    WebElement searchBtn = driver.findElement(By.id("searchBtn"));
+    searchBtn.click();
+
+    WebElement deleteBtn = driver.findElement(By.id("del-test123"));
+    deleteBtn.click();
+  }
+
+  @Test
+  public void TC3_2(){
+    loginAsAdmin();
+
+    WebElement bookId = driver.findElement(By.id("addBook-id"));
+    bookId.sendKeys("test123");
+
+    WebElement title = driver.findElement(By.id("addBook-title"));
+    title.sendKeys("test");
+
+    WebElement author = driver.findElement(By.id("addBook-authors"));
+    author.sendKeys("test");
+
+    WebElement cost = driver.findElement(By.id("cost"));
+    cost.sendKeys("10.0");
+
+    WebElement addBtn = driver.findElement(By.name("addBook"));
+    addBtn.click();
+
+    WebElement feedback = driver.findElement(By.cssSelector("h2"));
+
+    String actualMessage = feedback.getText();
+    String expectedMessage = "Validation errors";
+
+    assertEquals(expectedMessage, actualMessage);
+    
+    WebElement category = driver.findElement(By.id("addBook-category"));
+    category.sendKeys("test");
+
+    WebElement newAddBtn = driver.findElement(By.name("addBook"));
+    newAddBtn.click();
+
+    WebElement newFeedback = driver.findElement(By.cssSelector("h2"));
+
+    String newActualMessage = newFeedback.getText();
+    String newExpectedMessage = "Successfully added book";
+
+    assertEquals(newExpectedMessage, newActualMessage);
+
+    WebElement search = driver.findElement(By.id("search"));
+    search.sendKeys("test");
+
+    WebElement searchBtn = driver.findElement(By.id("searchBtn"));
+    searchBtn.click();
+
+    WebElement deleteBtn = driver.findElement(By.id("del-test123"));
+    deleteBtn.click();
+  }
+
+  @Test
+  public void TC3_3(){
+    loginAsAdmin();
+
+    WebElement category = driver.findElement(By.id("addBook-category"));
+    category.sendKeys("test");
+
+    WebElement bookId = driver.findElement(By.id("addBook-id"));
+    bookId.sendKeys("test123");
+
+    WebElement title = driver.findElement(By.id("addBook-title"));
+    title.sendKeys("test");
+
+    WebElement author = driver.findElement(By.id("addBook-authors"));
+    author.sendKeys("test");
+
+    WebElement cost = driver.findElement(By.id("cost"));
+    cost.sendKeys("10.0");
+
+    WebElement addBtn = driver.findElement(By.name("addBook"));
+    addBtn.click();
+
+    WebElement addBtn2 = driver.findElement(By.name("addBook"));
+    addBtn2.click();
+
+    WebElement newFeedback = driver.findElement(By.cssSelector("h2"));
+
+    String newActualMessage = newFeedback.getText();
+    String neweExpectedMessage = "Book with same id already exist";
+
+    assertEquals(neweExpectedMessage, newActualMessage);
+
+    WebElement bookId3 = driver.findElement(By.id("addBook-id"));
+    bookId3.clear();
+    bookId3.sendKeys("test1234");
+
+    WebElement addBtn3 = driver.findElement(By.name("addBook"));
+    addBtn3.click();
+
+    WebElement feedback = driver.findElement(By.cssSelector("h2"));
+
+    String ActualMessage = feedback.getText();
+    String ExpectedMessage = "Successfully added book";
+
+    assertEquals(ExpectedMessage, ActualMessage);
+
+    WebElement searchBtn = driver.findElement(By.id("searchBtn"));
+    searchBtn.click();
+
+    WebElement deleteBtn = driver.findElement(By.id("del-test123"));
+    deleteBtn.click();
+
+    WebElement deleteBtn2 = driver.findElement(By.id("del-test1234"));
+    deleteBtn2.click();
+
+  }
+
+  @Test
+  public void TC6_2(){
+    WebElement searchBtn = driver.findElement(By.id("searchBtn"));
+    searchBtn.click();
+
+    WebElement addToCartBtn = driver.findElement(By.id("order-hall001"));
+    addToCartBtn.click();
+    addToCartBtn.click();
+
+    WebElement goToCartBtn = driver.findElement(By.id("cartLink"));
+    goToCartBtn.click();
+
+    WebElement bookAdded = driver.findElement(By.id("hall001"));
+
+    String actualNmbOfBooksAdded = bookAdded.getAttribute("value");
+
+    String expectedNmbOfBooksAdded = "2";
+
+    assertEquals(expectedNmbOfBooksAdded, actualNmbOfBooksAdded);
+
+    bookAdded.sendKeys("0");
+
+    WebElement updateBtn = driver.findElement(By.className("updatebt"));
+    updateBtn.click();
+  }
+
+  @Test
+  public void TC8_1(){
+    WebElement searchBtn = driver.findElement(By.id("searchBtn"));
+    searchBtn.click();
+
+    WebElement addToCartBtn = driver.findElement(By.id("order-hall001"));
+    addToCartBtn.click();
+
+    WebElement goToCartBtn = driver.findElement(By.id("cartLink"));
+    goToCartBtn.click();
+
+    WebElement bookAdded = driver.findElement(By.id("hall001"));
+
+    bookAdded.clear();
+    bookAdded.sendKeys("2");
+
+    WebElement updateBtn = driver.findElement(By.className("updatebt"));
+    updateBtn.click();
+
+    WebElement newTotalCost = driver.findElement(By.id("tothall001"));
+
+    String actualNewTotalCost = newTotalCost.getText();
+    String expectedNewTotalCost = "$79.90";
+
+    assertEquals(expectedNewTotalCost, actualNewTotalCost);
+  }
+
+  @Test
+  private void TC9_1(){
+    WebElement searchBtn = driver.findElement(By.id("searchBtn"));
+    searchBtn.click();
+
+    WebElement goToCartBtn = driver.findElement(By.id("cartLink"));
+    goToCartBtn.click();
+
+    WebElement checkoutBtn = driver.findElement(By.name("checkout"));
+    checkoutBtn.click();
+
+    String newActualUrl = "http://localhost:8080/checkout";
+    String newExpectedUrl = driver.getCurrentUrl();
+    assertEquals(newExpectedUrl, newActualUrl);
+  }
+
+  // This test was taken from the example that came with the assignment.
+  @Test
+  public void TC10_1() {
+    WebElement welcome = driver.findElement(By.cssSelector("p"));
+    String expected = "Welcome";
+    String actual = welcome.getText();
+    assertEquals(expected, getWords(actual)[0]);
+
+    WebElement langSelector = driver.findElement(By.id("locales"));
+    langSelector.click();
+
+    WebElement frSelector = driver.findElement(By.cssSelector("option:nth-child(3)"));
+    frSelector.click();
+
+    welcome = driver.findElement(By.cssSelector("p"));
+    expected = "Bienvenu";
+    actual = welcome.getText();
+    assertEquals(expected, getWords(actual)[0]);
+  }
 
   private void loginAsAdmin() {
 

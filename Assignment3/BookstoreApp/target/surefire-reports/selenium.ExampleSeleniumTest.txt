@@ -1,12 +1,57 @@
 -------------------------------------------------------------------------------
 Test set: selenium.ExampleSeleniumTest
 -------------------------------------------------------------------------------
-Tests run: 18, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 50.364 s <<< FAILURE! - in selenium.ExampleSeleniumTest
-checkoutFeesTestPositive  Time elapsed: 1.509 s  <<< FAILURE!
+Tests run: 24, Failures: 4, Errors: 3, Skipped: 0, Time elapsed: 82.686 s <<< FAILURE! - in selenium.ExampleSeleniumTest
+checkoutFeesTestPositive  Time elapsed: 1.83 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <$104.29> but was: <$104.28>
-	at selenium.ExampleSeleniumTest.checkoutFeesTestPositive(ExampleSeleniumTest.java:466)
+	at selenium.ExampleSeleniumTest.checkoutFeesTestPositive(ExampleSeleniumTest.java:422)
 
-checkoutFeesTestNegative  Time elapsed: 1.377 s  <<< FAILURE!
+checkoutFeesTestNegative  Time elapsed: 1.503 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <$0.00> but was: <$10.00>
-	at selenium.ExampleSeleniumTest.checkoutFeesTestNegative(ExampleSeleniumTest.java:502)
+	at selenium.ExampleSeleniumTest.checkoutFeesTestNegative(ExampleSeleniumTest.java:458)
+
+TC3_2  Time elapsed: 2.063 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: element is not attached to the page document
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'FELIX-PC', ip: '192.168.2.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\CATHER~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52149}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5f760daa7a205676cfa7669b22c91b71
+	at selenium.ExampleSeleniumTest.TC3_2(ExampleSeleniumTest.java:683)
+
+TC3_3  Time elapsed: 1.838 s  <<< ERROR!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: element is not attached to the page document
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'FELIX-PC', ip: '192.168.2.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\CATHER~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58313}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bc7473bc47d01af45ba8f2de19db86c1
+	at selenium.ExampleSeleniumTest.TC3_3(ExampleSeleniumTest.java:739)
+
+addBookPositive  Time elapsed: 1.921 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Successfully added book> but was: <Book with same id already exist>
+	at selenium.ExampleSeleniumTest.addBookPositive(ExampleSeleniumTest.java:87)
+
+removeBookPositive  Time elapsed: 11.804 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#del\-test1234"}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'FELIX-PC', ip: '192.168.2.113', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\CATHER~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50644}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: aa72940df651fc6db45d2e75a66a0e46
+*** Element info: {Using=id, value=del-test1234}
+	at selenium.ExampleSeleniumTest.removeBookPositive(ExampleSeleniumTest.java:494)
+
+loginAsAdminAndAddingBookPositive  Time elapsed: 1.753 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Successfully added book> but was: <Book with same id already exist>
+	at selenium.ExampleSeleniumTest.loginAsAdminAndAddingBookPositive(ExampleSeleniumTest.java:545)
 
