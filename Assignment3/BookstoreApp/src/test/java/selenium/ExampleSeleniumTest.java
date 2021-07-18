@@ -700,19 +700,19 @@ class ExampleSeleniumTest {
     loginAsAdmin();
 
     WebElement category = driver.findElement(By.id("addBook-category"));
-    category.sendKeys("test");
+    category.sendKeys("category");
 
     WebElement bookId = driver.findElement(By.id("addBook-id"));
-    bookId.sendKeys("test123");
+    bookId.sendKeys("id9876");
 
     WebElement title = driver.findElement(By.id("addBook-title"));
-    title.sendKeys("test");
+    title.sendKeys("sheep");
 
     WebElement author = driver.findElement(By.id("addBook-authors"));
-    author.sendKeys("test");
+    author.sendKeys("Sigward");
 
     WebElement cost = driver.findElement(By.id("cost"));
-    cost.sendKeys("10.0");
+    cost.sendKeys("15.0");
 
     WebElement addBtn = driver.findElement(By.name("addBook"));
     addBtn.click();
@@ -729,7 +729,7 @@ class ExampleSeleniumTest {
 
     WebElement bookId3 = driver.findElement(By.id("addBook-id"));
     bookId3.clear();
-    bookId3.sendKeys("test1234");
+    bookId3.sendKeys("sheep12");
 
     WebElement addBtn3 = driver.findElement(By.name("addBook"));
     addBtn3.click();
@@ -744,10 +744,12 @@ class ExampleSeleniumTest {
     WebElement searchBtn = driver.findElement(By.id("searchBtn"));
     searchBtn.click();
 
-    WebElement deleteBtn = driver.findElement(By.id("del-test123"));
+    WebElement deleteBtn = driver.findElement(By.id("del-sheep12"));
     deleteBtn.click();
 
-    WebElement deleteBtn2 = driver.findElement(By.id("del-test1234"));
+    driver.navigate().refresh();
+
+    WebElement deleteBtn2 = driver.findElement(By.id("del-id9876"));
     deleteBtn2.click();
 
   }
