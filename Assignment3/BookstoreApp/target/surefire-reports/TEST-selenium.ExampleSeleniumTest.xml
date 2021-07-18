@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ExampleTest" time="0.056" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="selenium.ExampleSeleniumTest" time="50.364" tests="18" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="16"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -55,5 +55,44 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="60.0"/>
   </properties>
-  <testcase name="makingSureJUnitConfigured" classname="ExampleTest" time="0.037"/>
+  <testcase name="searchEmptyCategoryPositive" classname="selenium.ExampleSeleniumTest" time="4.731"/>
+  <testcase name="searchEmptyCategoryNegative" classname="selenium.ExampleSeleniumTest" time="11.928"/>
+  <testcase name="checkoutFeesTestPositive" classname="selenium.ExampleSeleniumTest" time="1.509">
+    <failure message="expected: &lt;$104.29&gt; but was: &lt;$104.28&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <$104.29> but was: <$104.28>
+	at selenium.ExampleSeleniumTest.checkoutFeesTestPositive(ExampleSeleniumTest.java:466)
+]]></failure>
+    <system-err><![CDATA[Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 19913
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 18, 2021 2:39:13 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="checkoutFeesTestNegative" classname="selenium.ExampleSeleniumTest" time="1.377">
+    <failure message="expected: &lt;$0.00&gt; but was: &lt;$10.00&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <$0.00> but was: <$10.00>
+	at selenium.ExampleSeleniumTest.checkoutFeesTestNegative(ExampleSeleniumTest.java:502)
+]]></failure>
+    <system-err><![CDATA[Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 39846
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jul 18, 2021 2:39:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="updateBookNumberPositive" classname="selenium.ExampleSeleniumTest" time="1.372"/>
+  <testcase name="searchCategoryPositive" classname="selenium.ExampleSeleniumTest" time="1.854"/>
+  <testcase name="updateBookNumberNegative" classname="selenium.ExampleSeleniumTest" time="1.405"/>
+  <testcase name="searchCategoryNegative" classname="selenium.ExampleSeleniumTest" time="1.514"/>
+  <testcase name="addToBookOrderPositive" classname="selenium.ExampleSeleniumTest" time="1.314"/>
+  <testcase name="checkBookOrderPositive" classname="selenium.ExampleSeleniumTest" time="1.441"/>
+  <testcase name="checkBookOrderNegative" classname="selenium.ExampleSeleniumTest" time="11.167"/>
+  <testcase name="test1" classname="selenium.ExampleSeleniumTest" time="0.932"/>
+  <testcase name="test2" classname="selenium.ExampleSeleniumTest" time="1.152"/>
+  <testcase name="test3" classname="selenium.ExampleSeleniumTest" time="1.253"/>
+  <testcase name="addBookPositive" classname="selenium.ExampleSeleniumTest" time="2.053"/>
+  <testcase name="addBookNegative" classname="selenium.ExampleSeleniumTest" time="1.556"/>
+  <testcase name="removeBookPositive" classname="selenium.ExampleSeleniumTest" time="1.906"/>
+  <testcase name="loginAsAdminAndAddingBookPositive" classname="selenium.ExampleSeleniumTest" time="1.862"/>
 </testsuite>

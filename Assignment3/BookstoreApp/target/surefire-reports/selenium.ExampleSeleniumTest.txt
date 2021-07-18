@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: selenium.ExampleSeleniumTest
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 50.364 s <<< FAILURE! - in selenium.ExampleSeleniumTest
+checkoutFeesTestPositive  Time elapsed: 1.509 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <$104.29> but was: <$104.28>
+	at selenium.ExampleSeleniumTest.checkoutFeesTestPositive(ExampleSeleniumTest.java:466)
+
+checkoutFeesTestNegative  Time elapsed: 1.377 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <$0.00> but was: <$10.00>
+	at selenium.ExampleSeleniumTest.checkoutFeesTestNegative(ExampleSeleniumTest.java:502)
+
